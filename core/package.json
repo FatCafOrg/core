@@ -1,0 +1,20 @@
+{
+  "name": "@tcinema/core",
+  "version": "1.0.0",
+  "description": "Core utils",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+  },
+  "exports": {
+    "prettier": "./src/prettier.config.mjs"
+  }
+}
