@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/factcaf-org/core.git"
+    "url": "git+https://github.com/factcaf-org/core"
   },
   "author": "",
   "license": "ISC",
