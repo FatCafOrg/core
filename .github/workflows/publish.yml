@@ -23,5 +23,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - name: Update npm to latest
         run: npm install -g npm@latest
+      - name: Unset NODE_ENV
+        run: echo "NODE_AUTH_TOKEN=" >> $GITHUB_ENV
       - name: Publishing
         run: npm publish --access public --provenance true
