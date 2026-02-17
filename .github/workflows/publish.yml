@@ -26,4 +26,4 @@ jobs:
       - name: Unset NODE_ENV
         run: unset NODE_AUTH_TOKEN
       - name: Publishing
-        run: npm publish --access public --provenance true
+        run: npm publish --access public --provenance
