@@ -2,8 +2,7 @@ name: Publish
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
 
 permissions:
   contents: read
@@ -11,19 +10,12 @@ permissions:
 
 jobs:
   publish:
-    name: Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
-          registry-url: 'https://registry.npmjs.org/'
-      - name: Update npm to latest
-        run: npm install -g npm@latest
-      - name: Unset NODE_ENV
-        run: unset NODE_AUTH_TOKEN
-      - name: Publishing
-        run: npm publish --access public --provenance
+
+      - run: npm publish --provenance --access public
