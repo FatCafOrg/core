@@ -13,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
   "peerDependencies": {
     "prettier": "^3.0.0"
   },
@@ -20,6 +23,17 @@
     "@trivago/prettier-plugin-sort-imports": "^5.2.2"
   },
   "exports": {
-    "./prettier": "./src/prettier.config.mjs"
+    "./prettier": "./src/prettier.config.mjs",
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "default": "./dist/lib/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/prettier.config.mjs"
+  ],
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
