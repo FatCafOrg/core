@@ -1,6 +1,6 @@
 {
   "name": "@factcaf-org/core",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Core utils",
   "publishConfig": {
     "access": "public",
@@ -20,7 +20,9 @@
     "prettier": "^3.0.0"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3"
   },
   "exports": {
     "./prettier": "./src/prettier.config.mjs",

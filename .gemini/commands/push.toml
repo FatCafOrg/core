@@ -1,0 +1,10 @@
+description = "Stage, commit with AI message, and push to GitHub"
+args = ["version"]
+prompt = """
+1. Run 'npm version {{version}}'
+1. Run 'git diff --cached' to see staged changes.
+2. If nothing staged, run 'git add .'
+3. Generate a concise conventional commit message.
+4. Run 'git commit -m "<message>"'
+5. Run 'git push origin $(git branch --show-current)'
+"""
